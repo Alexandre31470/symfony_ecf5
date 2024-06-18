@@ -1,5 +1,7 @@
 <?php
 
+// src/Entity/Post.php
+
 namespace App\Entity;
 
 use App\Repository\PostRepository;
