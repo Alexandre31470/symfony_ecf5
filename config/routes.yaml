@@ -7,3 +7,7 @@
 home:
     path: /
     controller: App\Controller\HomeController::index
+
+post:
+    path: /
+    controller: App\Controller\PostController::index

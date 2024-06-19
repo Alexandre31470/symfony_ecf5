@@ -23,7 +23,7 @@ class PostRepository extends ServiceEntityRepository
         parent::__construct($registry, Post::class);
     }
 
-    // Ajoutez vos méthodes personnalisées ici
+    
 }
 
 
