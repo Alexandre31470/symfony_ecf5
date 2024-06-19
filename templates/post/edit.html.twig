@@ -1,0 +1,17 @@
+{# templates/post/edit.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Édition d'un article{% endblock %}
+
+{% block body %}
+    <h1>Édition d'un article</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+
+        <button type="submit" class="btn btn-primary">Enregistrer les modifications</button>
+    {{ form_end(form) }}
+
+    <a href="{{ path('post_index') }}" class="btn btn-secondary">Retour à la liste des articles</a>
+{% endblock %}

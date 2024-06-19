@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Blog Posts{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/custom.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/posts.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/styles/app.css') }}">
+
+{% endblock %}
+
+{% block body %}
+    <h1>Mes derniers articles</h1>
+
+    <div class="example-wrapper">
+        <div class="post-list">
+            {% for post in posts %}
+                <div class="post-item">
+                    <h2>{{ post.title }}</h2>
+                    <p>{{ post.content }}</p>
+                    <small>By {{ post.author }} on {{ post.createdAt|date('Y-m-d H:i') }}</small>
+                    
+                    {# Ajouter le lien de suppression avec confirmation #}
+                    <form method="post" action="{{ path('post_delete', {'id': post.id}) }}" style="display:inline;">
+                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ post.id) }}">
+                        <button class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet article ?')">Supprimer</button>
+                    </form>
+                </div>
+            {% else %}
+                <p>Aucun article trouvé</p>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

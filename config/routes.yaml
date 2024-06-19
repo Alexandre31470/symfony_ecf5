@@ -11,3 +11,17 @@ home:
 post:
     path: /
     controller: App\Controller\PostController::index
+
+post_index:
+    path: /post
+    controller: App\Controller\PostController::index
+
+post_new:
+    path: /post/new
+    controller: App\Controller\PostController::new  
+    methods: [GET, POST] 
+    
+post_delete:
+    path: /post/delete/{id}
+    controller: App\Controller\PostController::delete
+    methods: [POST]
