@@ -1,0 +1,49 @@
+/* Container pour chaque post */
+.post-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+/* Effet de survol pour le post */
+/* .post-item:hover {
+    transform: translateY(-5px);
+} */
+
+/* Titre du post */
+.post-item h2 {
+    margin-top: 0;
+    font-size: 1.75em;
+    color: #333;
+}
+
+/* Contenu du post */
+.post-item p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Auteur et date de création du post */
+.post-item small {
+    display: block;
+    margin-top: 10px;
+    color: #999;
+    font-size: 0.875em;
+}
+
+/* Liens dans le post (modifier, supprimer, etc.) */
+.post-item a {
+    color: #007BFF;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.post-item a:hover {
+    text-decoration: underline;
+}

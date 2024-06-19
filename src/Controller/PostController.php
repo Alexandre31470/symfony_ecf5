@@ -77,6 +77,7 @@ class PostController extends AbstractController
         // Rend la vue du formulaire d'édition avec le formulaire créé
         return $this->render('post/edit.html.twig', [
             'form' => $form->createView(),
+            'post' => $post, // Assurez-vous que 'post' est bien transmis
         ]);
     }
 
@@ -93,4 +94,3 @@ class PostController extends AbstractController
             'post' => $post,
         ]);
     }}
-

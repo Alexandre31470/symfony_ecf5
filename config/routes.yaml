@@ -4,13 +4,18 @@
 #         namespace: App\Controller
 #     type: attribute
 
+
+# config/routes.yaml
+
+# controllers:
+#     resource: ../../src/Controller/
+#     type: annotation
+
+# Définition des routes pour chaque contrôleur
+
 home:
     path: /
     controller: App\Controller\HomeController::index
-
-post:
-    path: /
-    controller: App\Controller\PostController::index
 
 post_index:
     path: /post
@@ -20,8 +25,13 @@ post_new:
     path: /post/new
     controller: App\Controller\PostController::new  
     methods: [GET, POST] 
+
+post_edit:
+    path: /post/{id}/edit
+    controller: App\Controller\PostController::edit
+    methods: ['GET', 'POST']
     
 post_delete:
     path: /post/delete/{id}
     controller: App\Controller\PostController::delete
-    methods: [POST]
+    methods: [POST] 
